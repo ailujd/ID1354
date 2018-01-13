@@ -1,13 +1,18 @@
 <html>
 <head>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="comment.js"></script>
+    <script src="create_comments.js"></script>
+    <script src="delete_comment.js"></script>
 <meta charset="utf-8">
     <title>Tasty Recipes</title>
     
-    <link   href="CSS/reset.css"
+    <link   href="reset.css"
             rel="stylesheet"
             type="text/css">
     
-    <link   href="CSS/main.css"
+    <link   href="main.css"
             rel="stylesheet"
             type="text/css"> 
 
@@ -29,8 +34,10 @@
     
     <ul>
   <li><a class="active" href="index.html">Home</a></li>
-  <li><a href="recept.html">Recepies</a></li>
+  <li><a href="recept.html">Recipes</a></li>
   <li><a href="calender.html">Calender</a></li>
+  <li><a href="login.php">Log in / Log off</a></li>
+  <li><a href="signup.php">Sign Up</a></li>
 </ul>
     
     <center><img src="2.jpg" alt="veganska pannkakor"  ></center>
@@ -57,15 +64,23 @@
     <br>
     <br>
     <h3>Comments: </h3>
-    <br>
-    <p>2017-10-20</p>
-    <p>Vera: "Ha i mer mjölk än vad receptet säger :) "</p>
-    <br>
-    <p>2017-10-10</p>
-    <P>Agnes: "Jag lyckades inte alls med receptet! Tips tack!"</P>
-    <br>
+  
     
    
+<div id= "comments">
+        
+
     
+</div> 
+
+    <div>
+        <input id ="commentfield" type="text"/>
+        <button id="post_button">Post</button>
+    </div>
+    <br>
+    <br>
 </body>
 </html>
+
+
+    

@@ -11,7 +11,14 @@
 	        
 	        $username = $_SESSION['u_uid'];
 	        $comment = mysqli_real_escape_string($link, $_POST['comment']);
-	 		$recept = $_SERVER['REQUEST_URI'];
+	 		
+
+	 		if (isset($_POST['recept'])){
+
+			$recept = $_POST['recept']; 
+				} else {
+			$recept = $_SERVER['REQUEST_URI']; 
+				}
 
 	        $query = "INSERT INTO Comments (User, Comment, Recept) VALUES ('$username', '$comment', '$recept')";
 	        

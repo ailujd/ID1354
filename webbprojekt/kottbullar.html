@@ -1,13 +1,18 @@
 <html>
 <head>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="comment.js"></script>
+    <script src="create_comments.js"></script>
+    <script src="delete_comment.js"></script>
 <meta charset="utf-8">
     <title>Tasty Recipes</title>
     
-    <link   href="CSS/reset.css"
+    <link   href="reset.css"
             rel="stylesheet"
             type="text/css">
     
-    <link   href="CSS/main.css"
+    <link   href="main.css"
             rel="stylesheet"
             type="text/css"> 
     
@@ -26,8 +31,10 @@
     
     <ul>
   <li><a class="active" href="index.html">Home</a></li>
-  <li><a href="recept.html">Recepies</a></li>
+  <li><a href="recept.html">Recipes</a></li>
   <li><a href="calender.html">Calender</a></li>
+  <li><a href="login.php">Log in / Log off</a></li>
+  <li><a href="signup.php">Sign Up</a></li>
 </ul>
 
 
@@ -51,18 +58,21 @@
    <p>Koka riset enligt anvisningen på förpackningen och låt kallna.</p>
 <p>Skölj kikärtorna rinna och låt rinna av. Mixa alla ingredienser till en smet och forma till bullar. Låt bullarna ligga i kylen ca 30 minuter så det stelnar till.</p>
     <p>Stek dem i oljan i en stekpanna och servera.</p>
-    <br>
-    <br>
-    <br>
+<br>
     <h3>Comments: </h3>
-    <br>
-    <p>2017-03-19</p>
-    <p>Sara: "Super gott!! Jag kan varmt rekommendera detta recept "</p>
-    <br>
-    <p>2016-09-03</p>
-    <p>Stefan: "Jag gjorde även gräddsås till på havregrädde"</p>
-    <br>
-    <br>
     
+<div id= "comments">
+        
+
+    
+</div> 
+
+    <div>
+        <input id ="commentfield" type="text"/>
+        <button id="post_button">Post</button>
+    </div>
+    <br>
+    <br>
 </body>
 </html>
+

@@ -2,7 +2,16 @@
 
 require('config.php');
 
-$recept = $_SERVER['REQUEST_URI'];
+$recept = "";
+
+if (isset($_POST['recept'])){
+
+	$recept = $_POST['recept']; 
+} else {
+	$recept = $_SERVER['REQUEST_URI']; 
+}
+
+
 $query = "SELECT User, Comment, Created_at FROM Comments WHERE Recept = '$recept'";
 $result = mysqli_query($link, $query);
 
@@ -15,9 +24,13 @@ if($result){
 		$Comment = $row['Comment'];
 		$Created = $row['Created_at'];
 
-		printf ("<form action='delete_comment_controller.php' metod='POST'>User: <input type='text' name='user'  value='%s' readonly><br>%s<br>Comment <input type='text' name='Comment' value='%s' readonly><br><input type='submit' value='Delete'></form>", $Username, $Created, $Comment);
+		printf ("<div><p id='comment'>%s</p>
+				<p id='user'>%s</p>
+				<p id='date'>%s</p>
+				<button id='delete_button' class ='delete_button'>Delete</button></div>", $Comment, $Username, $Created);
 	}
 } 
 
 ?>
+
 
